@@ -11,6 +11,9 @@ from sklearn.metrics import accuracy_score, classification_report, recall_score
 import joblib
 # for creating a folder
 import os
+os.environ["HF_HUB_HTTP_TIMEOUT"] = "60"
+os.environ["HF_HUB_ETAG_TIMEOUT"] = "60"
+
 # for hugging face space authentication to upload files
 from huggingface_hub import login, HfApi, create_repo
 from huggingface_hub.utils import RepositoryNotFoundError, HfHubHTTPError
